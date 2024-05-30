@@ -16,23 +16,5 @@
         "nombre": "03Polialfabeticos",
         "ruta_pdf": "/static/pdfs/03Polialfabeticos.pdf",
         "ruta_imagen": "/static/img/03Polialfabeticos.jpg"
-    },
-    {
-        "id": 4,
-        "nombre": "04KerckhoffsShannon",
-        "ruta_pdf": "/static/pdfs/04KerckhoffsShannon.pdf",
-        "ruta_imagen": "/static/img/04KerckhoffsShannon.jpg"
-    },
-    {
-        "id": 5,
-        "nombre": "05Hill",
-        "ruta_pdf": "/static/pdfs/05Hill.pdf",
-        "ruta_imagen": "/static/img/05Hill.jpg"
-    },
-    {
-        "id": 6,
-        "nombre": "06Vernman",
-        "ruta_pdf": "/static/pdfs/06Vernman.pdf",
-        "ruta_imagen": "/static/img/06Vernam.jpg"
     }
 ]
