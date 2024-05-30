@@ -1,4 +1,3 @@
-
 <template>
   <div class="GWZ7yf AJFihd LBlAUc">
     <div class="Dy8Cxc QRiHXd">
@@ -7,116 +6,35 @@
       </span>
     </div>
     <div class="IPGLSb">
-      <div class="QRiHXd J2Cevf" guidedhelpid="submissionManager">
+      <div class="QRiHXd J2Cevf">
         <div>
-          <div  class="VfPpkd-xl07Ob-XxIAqe-OWXEXe-oYxtQd" >
-            
-              <div class=" d-grid VfPpkd-dgl2Hf-ppHlrf-sM5MNb" data-is-touch-wrapper="true">
-                <button class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-INsAgc VfPpkd-LgbsSe-OWXEXe-Bz112c-M1Soyc VfPpkd-LgbsSe-OWXEXe-dgl2Hf Rj2Mlf OLiIxf  FL3Khc" >
-                  <svg focusable="false" width="24" height="24" viewBox="0 0 24 24" class="a7AG0 NMm5M">
-                    <path d="M20 13h-7v7h-2v-7H4v-2h7V4h2v7h7v2z">
-                    </path>
-                  </svg>
-                  <span >Añadir archivo</span>
-                </button>
-              </div>
-            
-            <div > 
-              <div class="VfPpkd-xl07Ob-XxIAqe VfPpkd-xl07Ob q6oraf P77izf"  data-is-hoisted="true" data-should-flip-corner-horizontally="false" data-stay-in-viewport="false" data-menu-uid="ucc-151">
-              </div>
+          <div class="VfPpkd-xl07Ob-XxIAqe-OWXEXe-oYxtQd">
+            <div class="d-grid VfPpkd-dgl2Hf-ppHlrf-sM5MNb">
+              <button class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-INsAgc VfPpkd-LgbsSe-OWXEXe-Bz112c-M1Soyc VfPpkd-LgbsSe-OWXEXe-dgl2Hf Rj2Mlf OLiIxf FL3Khc">
+                <svg focusable="false" width="24" height="24" viewBox="0 0 24 24" class="a7AG0 NMm5M">
+                  <path d="M20 13h-7v7h-2v-7H4v-2h7V4h2v7h7v2z"></path>
+                </svg>
+                <span>Añadir archivo</span>
+              </button>
+            </div>
+            <div>
+              <div class="VfPpkd-xl07Ob-XxIAqe VfPpkd-xl07Ob q6oraf P77izf"></div>
             </div>
           </div>
         </div>
-      </div><div >
-        <div class=" d-grid VfPpkd-dgl2Hf-ppHlrf-sM5MNb" data-is-touch-wrapper="true">
-          <button class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc   upBbve bDxw8b" >
+      </div>
+      <div>
+        <div class="d-grid VfPpkd-dgl2Hf-ppHlrf-sM5MNb">
+          <button class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc upBbve bDxw8b">
             <div class="VfPpkd-RLmnJb"></div>
             <span>Subir</span>
           </button>
         </div>
       </div>
     </div>
-    </div>
+  </div>
 </template>
 
-<script>
-import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf';
-import pdfjsWorker from 'pdfjs-dist/legacy/build/pdf.worker?url';
-
-// Crear una URL válida a partir del objeto pdfjsWorker
-const workerSrcUrl = new URL(pdfjsWorker, import.meta.url).toString();
-pdfjsLib.GlobalWorkerOptions.workerSrc = workerSrcUrl;
-
-export default {
-  data() {
-    return {
-      archivoPDF: null,
-      directorioVirtual: null,
-    };
-  },
-  methods: {
-    handleFileUpload() {
-      this.archivoPDF = this.$refs.fileInput.files[0];
-    },
-    async guardarArchivos() {
-      if (!this.archivoPDF) {
-        console.error('No se ha seleccionado ningún archivo PDF');
-        return;
-      }
-
-      const reader = new FileReader();
-      reader.onload = async () => {
-        const pdfData = new Uint8Array(reader.result);
-        const pdfDoc = await pdfjsLib.getDocument(pdfData).promise;
-        const page = await pdfDoc.getPage(1);
-        const viewport = page.getViewport({ scale: 1 });
-        const canvas = document.createElement('canvas');
-        const context = canvas.getContext('2d');
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-        const renderContext = {
-          canvasContext: context,
-          viewport,
-        };
-        await page.render(renderContext);
-
-        const coverImage = canvas.toDataURL('image/jpeg');
-        const pdfName = this.archivoPDF.name;
-
-        try {
-          const directoryHandle = await window.showDirectoryPicker();
-          const fileHandle = await directoryHandle.getFileHandle('/static/pdf/' + pdfName, { create: true });
-          const writable = await fileHandle.createWritable();
-          await writable.write(this.archivoPDF);
-          writable.close();
-
-          const imgBlob = this.dataURItoBlob(coverImage);
-          const imgFileHandle = await directoryHandle.getFileHandle('/static/img/' + `${pdfName.split('.')[0]}.jpg`, { create: true });
-          const imgWritable = await imgFileHandle.createWritable();
-          await imgWritable.write(imgBlob);
-          imgWritable.close();
-
-          console.log('Archivos guardados correctamente');
-        } catch (error) {
-          console.error('Error al guardar los archivos:', error);
-        }
-      };
-
-      reader.readAsArrayBuffer(this.archivoPDF);
-    },
-    dataURItoBlob(dataURI) {
-      const byteString = atob(dataURI.split(',')[1]);
-      const mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
-      const ab = new ArrayBuffer(byteString.length);
-      const ia = new Uint8Array(ab);
-      for (let i = 0; i < byteString.length; i++) {
-        ia[i] = byteString.charCodeAt(i);
-      }
-      return new Blob([ab], { type: mimeString });
-    },
-  },
-};
-</script>
 <style>
 .GWZ7yf {
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 2px 6px 2px rgba(60, 64, 67, .15);
