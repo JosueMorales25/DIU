@@ -1,0 +1,22 @@
+[
+    {
+      "id": 1,
+      "nombre": "proba-21-9-21",
+      "ruta_pdf": "/static/pdfs/proba-21-9-21.pdf",
+      "ruta_imagen": "/static/img/proba-21-9-21.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "proba_22-9-21",
+      "ruta_pdf": "/static/pdfs/proba_22-9-21.pdf",
+      "ruta_imagen": "/static/img/proba_22-9-21.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "proba_23-9-21",
+      "ruta_pdf": "/static/pdfs/proba_23-9-21.pdf",
+      "ruta_imagen": "/static/img/proba_23-9-21.jpg"
+    }
+    
+  ]
+  

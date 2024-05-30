@@ -1,0 +1,10 @@
+[
+    {
+      "id": 1,
+      "nombre": "EjemplosOrdenamientos",
+      "ruta_pdf": "/static/pdfs/EjemplosOrdenamientos.pdf",
+      "ruta_imagen": "/static/img/EjemplosOrdenamientos.jpg"
+    }
+    
+  ]
+  

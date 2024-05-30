@@ -1,0 +1,33 @@
+[
+  {"id": 1, "semestre_id": 1, "nombre": "Álgebra Superior I"},
+  {"id": 2, "semestre_id": 1, "nombre": "Estructuras Discretas"},
+  {"id": 3, "semestre_id": 1, "nombre": "Introducción a Ciencias de la Computación"},
+  {"id": 4, "semestre_id": 1, "nombre": "Matemáticas para las Ciencias Aplicadas I"},
+  {"id": 5, "semestre_id": 2, "nombre": "Álgebra Superior II"},
+  {"id": 6, "semestre_id": 2, "nombre": "Estructuras de Datos"},
+  {"id": 7, "semestre_id": 2, "nombre": "Graficas y Juegos"},
+  {"id": 8, "semestre_id": 2, "nombre": "Matemáticas para las Ciencias Aplicadas II"},
+  {"id": 9, "semestre_id": 3, "nombre": "Álgebra Lineal I"},
+  {"id": 10, "semestre_id": 3, "nombre": "Matemáticas para las Ciencias Aplicadas III"},
+  {"id": 11, "semestre_id": 3, "nombre": "Modelado y Programación"},
+  {"id": 12, "semestre_id": 3, "nombre": "Probabilidad I"},
+  {"id": 13, "semestre_id": 4, "nombre": "Autómatas y Lenguajes Formales"},
+  {"id": 14, "semestre_id": 4, "nombre": "Lógica Computacional"},
+  {"id": 15, "semestre_id": 4, "nombre": "Matemáticas para las Ciencias Aplicadas IV"},
+  {"id": 16, "semestre_id": 4, "nombre": "Organización y Arquitectura de Computadoras"},
+  {"id": 17, "semestre_id": 5, "nombre": "Análisis de Algoritmos"},
+  {"id": 18, "semestre_id": 5, "nombre": "Computación Distribuida"},
+  {"id": 19, "semestre_id": 5, "nombre": "Fundamentos de Bases de Datos"},
+  {"id": 20, "semestre_id": 5, "nombre": "Lenguajes de Programación"},
+  {"id": 21, "semestre_id": 6, "nombre": "Ingeniería de Software"},
+  {"id": 22, "semestre_id": 6, "nombre": "Inteligencia Artificial"},
+  {"id": 23, "semestre_id": 6, "nombre": "Sistemas Operativos"},
+  {"id": 24, "semestre_id": 7, "nombre": "Compiladores"},
+  {"id": 25, "semestre_id": 7, "nombre": "Complejidad Computacional"},
+  {"id": 26, "semestre_id": 7, "nombre": "Redes de Computadoras"},
+  {"id": 27, "semestre_id": 8, "nombre": "Computación Concurrente"},
+  {"id": 28, "semestre_id": 8, "nombre": "Criptografía y Seguridad"},
+  {"id": 29, "semestre_id": 9, "nombre": "Molletes"}
+
+
+]

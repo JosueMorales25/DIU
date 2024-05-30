@@ -1,0 +1,163 @@
+[
+    {
+      "semestre_id": 1,
+      "semestre_nombre": "PrimerSemestre",
+      "materias": [
+        {
+          "materia_id": 1,
+          "materia_nombre": "Álgebra Superior I"
+        },
+        {
+          "materia_id": 2,
+          "materia_nombre": "Estructuras Discretas"
+        },
+        {
+          "materia_id": 3,
+          "materia_nombre": "Introducción a Ciencias de la Computación"
+        },
+        {
+          "materia_id": 4,
+          "materia_nombre": "Matemáticas para las Ciencias Aplicadas I"
+        }
+      ]
+    },
+    {
+      "semestre_id": 2,
+      "semestre_nombre": "SegundoSemestre",
+      "materias": [
+        {
+          "materia_id": 5,
+          "materia_nombre": "Álgebra Superior II"
+        },
+        {
+          "materia_id": 6,
+          "materia_nombre": "Estructuras de Datos"
+        },
+        {
+          "materia_id": 7,
+          "materia_nombre": "Graficas y Juegos"
+        },
+        {
+          "materia_id": 8,
+          "materia_nombre": "Matemáticas para las Ciencias Aplicadas II"
+        }
+      ]
+    },
+    {
+      "semestre_id": 3,
+      "semestre_nombre": "TercerSemestre",
+      "materias": [
+        {
+          "materia_id": 9,
+          "materia_nombre": "Álgebra Lineal I"
+        },
+        {
+          "materia_id": 10,
+          "materia_nombre": "Matemáticas para las Ciencias Aplicadas III"
+        },
+        {
+          "materia_id": 11,
+          "materia_nombre": "Modelado y Programación"
+        },
+        {
+          "materia_id": 12,
+          "materia_nombre": "Probabilidad I"
+        }
+      ]
+    },
+    {
+      "semestre_id": 4,
+      "semestre_nombre": "CuartoSemestre",
+      "materias": [
+        {
+          "materia_id": 13,
+          "materia_nombre": "Autómatas y Lenguajes Formales"
+        },
+        {
+          "materia_id": 14,
+          "materia_nombre": "Lógica Computacional"
+        },
+        {
+          "materia_id": 15,
+          "materia_nombre": "Matemáticas para las Ciencias Aplicadas IV"
+        },
+        {
+          "materia_id": 16,
+          "materia_nombre": "Organización y Arquitectura de Computadoras"
+        }
+      ]
+    },
+    {
+      "semestre_id": 5,
+      "semestre_nombre": "QuintoSemestre",
+      "materias": [
+        {
+          "materia_id": 17,
+          "materia_nombre": "Análisis de Algoritmos"
+        },
+        {
+          "materia_id": 18,
+          "materia_nombre": "Computación Distribuida"
+        },
+        {
+          "materia_id": 19,
+          "materia_nombre": "Fundamentos de Bases de Datos"
+        },
+        {
+          "materia_id": 20,
+          "materia_nombre": "Lenguajes de Programación"
+        }
+      ]
+    },
+    {
+      "semestre_id": 6,
+      "semestre_nombre": "SextoSemestre",
+      "materias": [
+        {
+          "materia_id": 21,
+          "materia_nombre": "Ingeniería de Software"
+        },
+        {
+          "materia_id": 22,
+          "materia_nombre": "Inteligencia Artificial"
+        },
+        {
+          "materia_id": 23,
+          "materia_nombre": "Sistemas Operativos"
+        }
+      ]
+    },
+    {
+      "semestre_id": 7,
+      "semestre_nombre": "SeptimoSemestre",
+      "materias": [
+        {
+          "materia_id": 24,
+          "materia_nombre": "Compiladores"
+        },
+        {
+          "materia_id": 25,
+          "materia_nombre": "Complejidad Computacional"
+        },
+        {
+          "materia_id": 26,
+          "materia_nombre": "Redes de Computadoras"
+        }
+      ]
+    },
+    {
+      "semestre_id": 8,
+      "semestre_nombre": "OctavoSemestre",
+      "materias": [
+        {
+          "materia_id": 27,
+          "materia_nombre": "Computación Concurrente"
+        },
+        {
+          "materia_id": 28,
+          "materia_nombre": "Criptografía y Seguridad"
+        }
+      ]
+    }
+  ]
+  

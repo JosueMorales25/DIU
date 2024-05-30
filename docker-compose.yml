@@ -31,7 +31,7 @@ services:
 #
   frontend:
     build:
-      context: ./front
+      context: ./frontend
       dockerfile: Dockerfile
     ports:
       - "80:8080"
